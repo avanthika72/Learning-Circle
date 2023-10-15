@@ -1,0 +1,16 @@
+div {
+    margin: auto;
+    width: 150px;
+    height: 150px;
+    background-color: darkorange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+div > div {
+    width: 55px;
+    height: 55px;
+    background-color: darkslategrey;
+}

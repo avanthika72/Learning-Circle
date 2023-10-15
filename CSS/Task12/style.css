@@ -1,0 +1,8 @@
+div {
+    height: 70px;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}

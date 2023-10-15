@@ -1,0 +1,6 @@
+div {
+    min-height: 43px;
+    color: gray;
+    text-align: center;
+    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+}

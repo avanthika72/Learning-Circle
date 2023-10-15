@@ -1,0 +1,21 @@
+.major{
+    height: 600px;
+    width: 600px;
+    padding: 40px;
+}
+
+.main{
+    height: 130px;
+    width: 540px;
+    gap: 20px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.div{
+    height: 100px;
+    width: 120px;
+    border: 1px solid darkslategrey;
+
+}

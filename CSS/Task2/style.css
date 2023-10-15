@@ -1,0 +1,9 @@
+* {
+    margin: 10px;
+}
+
+button {
+    background-color: red;
+    border-color: darkslategray;
+    border-width: 3.5px;
+}
