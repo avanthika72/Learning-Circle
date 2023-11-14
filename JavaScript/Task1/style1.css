@@ -1,0 +1,21 @@
+* {
+    margin: 20px;
+    padding: 10px;
+    /* text-align: center; */
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* min-height: 90%; */
+    /* min-width: 90%; */
+}
+
+button {
+    /* background-color: grey; */
+    border-radius: 10px;
+    min-width: 200px;
+    /* width: 580px; */
+}

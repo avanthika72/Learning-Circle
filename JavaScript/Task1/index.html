@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Roller</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    
+    <div>
+        <img id="dice" src="dice.svg" width="20%" height="auto">
+    </div>
+    <div>
+        <p id="num"></p>
+    </div>
+    <div>
+        <button onclick="roller()">Roll it!</button>
+    </div>
+
+    <script>
+        function roller()
+        {
+                var n=Math.floor(Math.random()*6)+1
+                document.getElementById("num").innerHTML=n
+                switch(n)
+                {
+                    case 1:
+                        document.getElementById("dice").src = "dice 1.svg"
+                        break
+                    case 2:
+                        document.getElementById("dice").src = "dice 2.svg"
+                        break
+                    case 3:
+                        document.getElementById("dice").src = "dice 3.svg"
+                        break
+                    case 4:
+                        document.getElementById("dice").src = "dice 4.svg"
+                        break
+                    case 5:
+                        document.getElementById("dice").src = "dice 5.svg"
+                        break
+                    case 6:
+                        document.getElementById("dice").src = "dice 6.svg"
+                        break
+                }
+        }
+    </script>
+
+</body>
+</html>

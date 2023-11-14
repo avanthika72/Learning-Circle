@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EMI Calculator</title>
+</head>
+<body style="margin: 50px;">
+    <h1>EMI Calculator</h1><br>
+
+    <label for="loanAmount">Loan Amount (in dollars):</label>
+    <input type="text" id="loanAmount">
+    <br><br>
+
+    <label for="interestRate">Annual Interest Rate (%):</label>
+    <input type="text" id="interestRate">
+    <br><br>
+
+    <label for="loanTerm">Loan Term (in months):</label>
+    <input type="text" id="loanTerm">
+    <br><br><br>
+
+    <button onclick="calculateEMI()">Calculate EMI</button><br>
+
+    <h2>Result</h2>
+    <p id="emiResult"></p>
+
+    <script>
+        function calculateEMI() {
+            const loanAmount = parseFloat(document.getElementById("loanAmount").value);
+            const interestRate = parseFloat(document.getElementById("interestRate").value) / 1200; // Monthly interest rate
+            const loanTerm = parseInt(document.getElementById("loanTerm").value);
+
+            if (isNaN(loanAmount) || isNaN(interestRate) || isNaN(loanTerm)) {
+                alert("Please enter valid numbers for all fields.");
+                return;
+            }
+
+            const emi = (loanAmount * interestRate * (Math.pow(1 + interestRate, loanTerm))) / (Math.pow(1 + interestRate, loanTerm) - 1);
+
+            document.getElementById("emiResult").innerText = `Your EMI: $${emi.toFixed(2)} per month`;
+        }
+    </script>
+</body>
+</html>

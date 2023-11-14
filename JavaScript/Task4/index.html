@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <title>Register</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div>
+        <form class="form" onsubmit="return  validate()">
+            <h1>Sign Up</h1><hr>
+            <label for="fname" class="1">First Name</label><br>
+                <input style="margin-bottom: 9px" type="text" placeholder="Enter name" class="i" id="fname" required><br>
+            <label for="lname" class="1">Last Name</label><br>
+                <input style="margin-bottom: 9px" type="text" name="" id="i" placeholder="Enter name" class="i"><br>
+            <label for="dob" class="1">Date of Birth</label><br>
+                <input style="margin-bottom: 9px;text-decoration: none;" placeholder="dd/mm/yyyy" type="date" class="l i"><br>
+            <label for="email" class="1">Email</label><br>
+                <input style="margin-bottom: 9px" type="email" placeholder="Enter email" class="i" id="mailid" required><br>
+            <label for="uname" class="1">Username</label><br>
+                <input style="margin-bottom: 9px" type="text" placeholder="Enter username" class="i" id="uname" required><br>
+            <label for="password" class="1">Password</label><br>
+                <input style="margin-bottom: 9px" type="password" placeholder="Enter password" class="i" id="pass" required><br>
+            <label for="cpass" class="1">Confirm Password</label><br>
+                <input type="password" class="i" placeholder="Repeat password" id="rpt" required><hr>
+            <button class="b" type="submit">Register</button>
+        </form>
+    </div>
+
+    <script>
+        function validate()
+        {
+            var firstnme=document.getElementById("fname")
+            var mail=document.getElementById("mailid")
+            var username=document.getElementById("uname")
+            var password=document.getElementById("pass")
+            var confmps=document.getElementById("rpt")
+        
+            if(firstnme.value.trim()==""||mail.value.trim()==""||username.value.trim()==""||password.value.trim()==""||confmps.value.trim()=="")
+            {
+                alert("No blank values allowed")
+                return false
+            }
+            else
+            {
+                true
+            }
+        }
+    </script>
+
+</body>
+</html>

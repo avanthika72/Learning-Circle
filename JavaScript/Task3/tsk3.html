@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMI Calculator</title>
+</head>
+<body style="margin: 50px;">
+    
+    <h1>EMI Calculator</h1><br>
+    Enter Principal Amount:  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="p-amt"><br><br>
+    Enter Interest Rate:  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="rate"><br><br>
+    Enter Number of Months:  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="no"><br><br><br>
+    <button onclick="emi()">Calculate EMI</button>
+    <h1 id="EMI"></h1>
+
+    <script>
+        function emi()
+        {
+            var P=document.getElementById("p-amt").value
+            var R=document.getElementById("rate").value/100/12
+            var n=document.getElementById("no").value
+            emival=(P*R*(1+R)**n)/((1+R)**n-1)
+            document.getElementById("EMI").innerHTML=emival
+        }
+    </script>
+
+</body>
+</html>
